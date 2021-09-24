@@ -1,0 +1,31 @@
+.product{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.product img{
+    margin-right: 5px;
+}
+.product-name{
+    color: rgb(0, 0, 250);
+    font-weight: 400;
+}
+
+.btn-regular{
+background-color: rgb(238, 194, 93);
+width: 150px;
+height: 25px;
+border: 1px solid lightgray;
+border-radius: 5px;
+cursor: pointer;
+}
+.btn-regular:hover{
+    background-color: rgb(143, 43, 4);
+    color: lightyellow;
+}
+
+/* Rating */
+.icon-color{
+    color: rgb(255, 185, 9);
+}
