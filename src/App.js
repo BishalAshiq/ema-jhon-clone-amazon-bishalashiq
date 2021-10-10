@@ -6,6 +6,7 @@ import Login from './components/Login/Login';
 import NotFound from './components/NotFound/NotFound';
 import OrderReview from './components/OrderReview/OrderReview';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
+import PriveteRoute from './components/PriveteRoute/PriveteRoute';
 import Register from './components/Register/Register';
 import Shop from './components/Shop/Shop';
 import AuthProvider from './context/AuthProvider';
@@ -14,9 +15,9 @@ function App() {
   return (
     <div className="App">
      
-        <AuthProvider>
+      <AuthProvider>
         <Router>
-        <Header></Header>
+           <Header></Header>
           <Switch>
             <Route exact path="/">
              <Shop></Shop>
@@ -25,14 +26,14 @@ function App() {
               <Shop></Shop>
             </Route>
             <Route path="/review">
-                <OrderReview></OrderReview>
+              <OrderReview></OrderReview>
             </Route>
             <Route path="/inventory">
-               <Inventory></Inventory>
+              <Inventory></Inventory>
             </Route>
-            <Route path="/placeorder">
+            <PriveteRoute path="/placeorder">
               <PlaceOrder></PlaceOrder>
-            </Route>
+            </PriveteRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -43,8 +44,8 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
-      </Router>
-        </AuthProvider>
+        </Router>
+      </AuthProvider>
 
     </div>
   );

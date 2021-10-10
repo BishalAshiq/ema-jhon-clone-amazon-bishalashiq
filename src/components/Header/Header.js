@@ -14,6 +14,7 @@ const Header = () => {
             <Link to="/shop">Shop</Link>
             <Link to="/review">Orders Review</Link>
             <Link to="/inventory">Manage Inventory</Link>
+            {user.email && <span style={{color: 'white'}}>Hello, {user.displayName} </span>}
             {
                 user.email ?
                 <button onClick={logOut}>Log Out</button>
