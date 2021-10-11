@@ -23,11 +23,12 @@ const useFirebase = () => {
 
    // Observe whether user auth state changed or not
     useEffect(() => {
-       onAuthStateChanged (auth, (user) => {
+       const unsunscribe = onAuthStateChanged (auth, (user) => {
            if(user){
                setUser(user);
            }
        })
+       return unsunscribe;
     } , [])
     return{
         user, 

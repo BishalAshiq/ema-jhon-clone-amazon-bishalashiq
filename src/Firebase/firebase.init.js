@@ -39,4 +39,7 @@ Step-4 Create auth Context hook (useAuth)
 Step-5  Create Privet Route
 1. create privet Route
 2. Set Privet Route
+
+Step-6 Redirect After Login
+1. After login redirect user to their desired destination
 */
