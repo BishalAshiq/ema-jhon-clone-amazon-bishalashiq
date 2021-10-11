@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 import useAuth from '../../hooks/useAuth';
 
 const PriveteRoute = ({children, ...rest}) => {
-    const {user} = useAuth()
+    const {user} = useAuth();
     return (
         <Route
         {...rest}
