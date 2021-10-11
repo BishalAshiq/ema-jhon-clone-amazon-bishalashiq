@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useHistory, useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import "./Login.css";
 
-import "./Login.css"
 const Login = () => {
     const {signInUsingGoogle} = useAuth();
     const location = useLocation(); 
@@ -14,7 +13,7 @@ const Login = () => {
 const handleGoogleLogin = () => {
    signInUsingGoogle()
    .then(result => {
-    history.push(redirect_uri)
+    history.push(redirect_uri);
 })
 }
 

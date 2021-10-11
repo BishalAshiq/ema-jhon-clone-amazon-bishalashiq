@@ -1,6 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router';
-import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
+import { Route, Redirect } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const PriveteRoute = ({children, ...rest}) => {
@@ -8,14 +7,13 @@ const PriveteRoute = ({children, ...rest}) => {
     return (
         <Route
         {...rest}
-        render={({ location }) =>
-         user.email ? children : (
-             <Redirect
-             to={{pathname:"/login", state:{from: location}
-            }}
-             ></Redirect>
-         )
-      } 
+        render={({location}) => user.email? children 
+        :<Redirect
+                to={{
+                    pathname: "/login",
+                    state: { from: location }
+                }}
+          ></Redirect> } 
         >
             
         </Route>

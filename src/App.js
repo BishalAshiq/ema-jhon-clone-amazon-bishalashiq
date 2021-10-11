@@ -8,6 +8,7 @@ import OrderReview from './components/OrderReview/OrderReview';
 import PlaceOrder from './components/PlaceOrder/PlaceOrder';
 import PriveteRoute from './components/PriveteRoute/PriveteRoute';
 import Register from './components/Register/Register';
+import Shipping from './components/Shipping/Shipping';
 import Shop from './components/Shop/Shop';
 import AuthProvider from './context/AuthProvider';
 
@@ -28,9 +29,12 @@ function App() {
             <Route path="/review">
               <OrderReview></OrderReview>
             </Route>
-            <Route path="/inventory">
+            <PriveteRoute path="/inventory">
               <Inventory></Inventory>
-            </Route>
+            </PriveteRoute>
+            <PriveteRoute path="/shipping">
+              <Shipping></Shipping>
+            </PriveteRoute>
             <PriveteRoute path="/placeorder">
               <PlaceOrder></PlaceOrder>
             </PriveteRoute>
